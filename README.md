@@ -1,8 +1,19 @@
 # uiview-plus
 Extending UIView to make boilerplate layout easier
 
-### Example usage
+Instead of 
 
+```
+NSLayoutConstraint.activate([
+  bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -margin),
+])
+```
+you can simply
+```
+someView.pinBottomToParent(margin: verticalMargin)
+```
+
+### Example usage
 ```
 func addContentView() {
   let sideMargin: CGFloat = 30
